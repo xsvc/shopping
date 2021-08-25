@@ -1,7 +1,10 @@
 <?php
 require_once 'config.php';
 
+// This checks if the user has pressed the login button on the index page.
 if (isset($_POST['login'])) {
+    // Gets the data the user typed in the fields in the login and sanitises the data
+    // uses function in template
     $username = sanitise_data($_POST['username']);
     $password = sanitise_data($_POST['password']);
 
